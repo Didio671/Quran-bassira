@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran Bassira</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6f8;
+        --surface: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --primary: #047857;
+        --accent: #d1fae5;
+        --border: #e5e7eb;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem;
+        position: sticky;
+        top: 0;
+      }
+
+      .topbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 1.5rem auto;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr) 320px;
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+      }
+
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+
+      .hero h1 {
+        margin-bottom: 0.4rem;
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .tool-list,
+      .feed-posts,
+      .groups,
+      .ai-actions {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .pill {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--primary);
+        border-radius: 999px;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 88px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 0.75rem;
+        resize: vertical;
+        font: inherit;
+      }
+
+      button {
+        background: var(--primary);
+        border: 0;
+        color: #fff;
+        border-radius: 8px;
+        padding: 0.5rem 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .post-meta,
+      .small {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 1024px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="brand">Quran Bassira</div>
+        <nav>
+          <a href="#fil">Fil</a>
+          <a href="#memorisation">Mémorisation</a>
+          <a href="#ia">Assistant IA</a>
+          <a href="#communaute">Communauté</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <aside class="card" id="memorisation">
+        <h2>Outils de mémorisation</h2>
+        <div class="tool-list">
+          <div>
+            <span class="pill">Révision</span>
+            <p class="small">Planifier les sourates à revoir chaque jour.</p>
+          </div>
+          <div>
+            <span class="pill">Suivi</span>
+            <p class="small">Suivre les progrès par hizb, juz et sourate.</p>
+          </div>
+          <div>
+            <span class="pill">Audio</span>
+            <p class="small">Répétition guidée pour renforcer la mémorisation.</p>
+          </div>
+        </div>
+      </aside>
+
+      <section id="fil">
+        <article class="card hero">
+          <h1>Un réseau social inspiré de Facebook, centré sur le Quran</h1>
+          <p>Partage, apprentissage et accompagnement IA pour une progression régulière.</p>
+        </article>
+
+        <article class="card">
+          <h2>Créer une publication</h2>
+          <textarea placeholder="Partage ton objectif de mémorisation ou une réflexion..."></textarea>
+          <p><button type="button">Publier</button></p>
+        </article>
+
+        <article class="feed-posts">
+          <div class="card">
+            <strong>@hafsa</strong>
+            <p class="post-meta">A terminé la mémorisation de la sourate Al-Mulk 🎉</p>
+          </div>
+          <div class="card">
+            <strong>@ibrahim</strong>
+            <p class="post-meta">Recherche un partenaire de révision pour le Juz 30.</p>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <section class="card" id="ia">
+          <h2>Assistant IA Quranique</h2>
+          <div class="ai-actions">
+            <p class="small">• Générer un planning de mémorisation personnalisé.</p>
+            <p class="small">• Proposer des quiz de révision selon ton niveau.</p>
+            <p class="small">• Expliquer le vocabulaire et le contexte des versets.</p>
+          </div>
+        </section>
+
+        <section class="card groups" id="communaute">
+          <h3>Groupes de la communauté</h3>
+          <p class="small">Débutants Hifz</p>
+          <p class="small">Tajwid quotidien</p>
+          <p class="small">Révision collective du vendredi</p>
+        </section>
+      </aside>
+    </main>
+  </body>
+</html>
